@@ -9,7 +9,9 @@ Project ini dibuat untuk tujuan edukasi dan analisis data, khususnya dalam memah
 ## Fitur Utama
 
 - **Prediksi Risiko Penyakit Jantung**
-  Menghasilkan prediksi biner dan probabilitas risiko.
+
+  - Terdapat field untuk user melakukan percobaan untuk memprediksi adanya penyakit jantung & seberapa tinggi resiko penyakit jantungnya dengan data user sendiri.
+  - Model mampu mengatasi nilai nol (user tidak perlu memasukkan semua fitur variabel yang dibutuhkan), variabel yang tidak memiliki nilai akan di-handle dengan imputasi
 
 - **Model Evaluation**
   Menampilkan:
@@ -38,7 +40,7 @@ project_root/
 ├── data/              # Dataset
 ├── model/             # Model terlatih (xgb_pipeline.pkl)
 ├── notebook/          # Notebook eksplorasi & training
-├── streamlit/
+├── app/
 │   └── app.py         # Aplikasi Streamlit
 ├── requirements.txt
 └── README.md
@@ -67,16 +69,10 @@ pip install -r requirements.txt
 
 ## Menjalankan Aplikasi
 
-Masuk ke folder Streamlit:
-
-```bash
-cd streamlit
-```
-
 Jalankan aplikasi:
 
 ```bash
-streamlit run app.py
+streamlit run app/app.py
 ```
 
 Aplikasi akan terbuka di browser:
